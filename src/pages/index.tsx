@@ -1,12 +1,16 @@
 import React from 'react'
+import Hero from '../components/Hero'
+import Projects from '../components/Projects'
+import About from '../components/About'
+import Contact from '../components/Contact'
 
 const Home: React.FC = () => {
   return (
     <>
-      <div style={{height:'100vh'}} id='home'>HOME</div>
-      <div style={{height:'100vh'}} id='projects'>Projects</div>
-      <div style={{height:'100vh'}} id='about'>About</div>
-      <div style={{height:'100vh'}} id='contact'>Contact</div>
+      <Hero />
+      <Projects />
+      <About />
+      <Contact />
     </>
   )
 }

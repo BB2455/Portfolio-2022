@@ -1,5 +1,16 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-export default styled.div`
+type Props = {
+  noFlex?: boolean
+}
+
+export default styled.div<Props>`
   width: 60rem;
+  ${(props) =>
+    props.noFlex
+      ? null
+      : `
+  display: flex;
+  justify-content: center;
+  `}
 `
