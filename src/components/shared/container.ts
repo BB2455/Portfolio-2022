@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 type Props = {
   noFlex?: boolean
+  nav?: boolean
 }
 
 export default styled.div<Props>`
@@ -11,6 +12,12 @@ export default styled.div<Props>`
       ? null
       : `
   display: flex;
-  justify-content: center;
   `}
+  ${(props) =>
+    props.nav
+      ? null
+      : `
+    align-items: center;
+    flex-direction: column;
+    `}
 `

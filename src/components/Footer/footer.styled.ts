@@ -19,6 +19,7 @@ export const TopDiv = styled.div`
   display: flex;
   padding: 2rem 1rem;
   justify-content: space-between;
+  min-width: 100%;
 `
 
 export const ContentDiv = styled.div`
@@ -39,5 +40,6 @@ export const IconDiv = styled.div`
 export const CenterDiv = styled.div`
   text-align: center;
   padding: 32px;
+  width: 100%;
   border-top: 1px solid ${(props) => props.theme.colors.white};
 `

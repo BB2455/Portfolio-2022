@@ -1,11 +1,16 @@
 import React from 'react'
 import { ProjectsBackground } from './projects.styled'
-import { Container, SvgTriangle } from '../shared'
+import { Container, SvgTriangle, SectionTitle } from '../shared'
 
 const projects: React.FC = () => {
   return (
     <ProjectsBackground id="projects" color="secondary">
-      <Container>Projects</Container>
+      <Container>
+        <SectionTitle
+          title="Projects"
+          subtitle="Here are a few past projects I've worked on"
+        />
+      </Container>
       <SvgTriangle
         width="100%"
         height="12rem"

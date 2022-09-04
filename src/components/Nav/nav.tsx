@@ -8,7 +8,7 @@ import { NavLink } from './nav.styled'
 
 const Nav: React.FC = () => {
   return (
-    <Container>
+    <Container nav>
       <LinksDiv>
         <NavLink
           href=""
