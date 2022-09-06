@@ -6,7 +6,7 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import ContactForm from './ContactForm'
 
-const contact: React.FC = () => {
+const Contact: React.FC = () => {
   return (
     <Background id="contact">
       <Container>
@@ -38,4 +38,4 @@ const contact: React.FC = () => {
   )
 }
 
-export default contact
+export default Contact

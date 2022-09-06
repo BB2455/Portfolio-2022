@@ -2,7 +2,7 @@ import React from 'react'
 import { ProjectsBackground } from './projects.styled'
 import { Container, SvgTriangle, SectionTitle } from '../shared'
 
-const projects: React.FC = () => {
+const Projects: React.FC = () => {
   return (
     <ProjectsBackground id="projects" color="secondary">
       <Container>
@@ -26,4 +26,4 @@ const projects: React.FC = () => {
   )
 }
 
-export default projects
+export default Projects

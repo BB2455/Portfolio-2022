@@ -8,6 +8,8 @@ const theme = {
     white: 'rgba(255, 255, 255, 100)',
   },
   font: "'Open Sans', sans-serif",
+  boxShadow: `0px 4px 4px rgba(233, 240, 243, 0.5),
+    0px 0px 0px 1px rgba(230, 236, 248, 1)`,
 }
 
 export default theme

@@ -15,8 +15,7 @@ export const Form = styled.form`
   padding: 3rem;
   min-width: 80%;
   border-radius: 2rem;
-  box-shadow: 0px 4px 4px rgba(233, 240, 243, 0.5),
-    0px 0px 0px 1px rgba(230, 236, 248, 1);
+  box-shadow: ${(props) => props.theme.boxShadow};
 `
 
 export const InputDiv = styled.div`
@@ -72,8 +71,7 @@ export const SubmitButton = styled.button`
   border-radius: 0.5rem;
   text-transform: uppercase;
   cursor: pointer;
-  box-shadow: 0px 4px 4px rgba(233, 240, 243, 0.5),
-    0px 0px 0px 1px rgba(230, 236, 248, 1);
+  box-shadow: ${(props) => props.theme.boxShadow};
   background: ${(props) => props.theme.colors.tertiary};
   padding: 0.5rem 2rem;
   gap: 0.5rem;

@@ -9,7 +9,7 @@ import {
 } from './hero.styled'
 import { Container, SvgTriangle } from '../shared'
 
-const hero: React.FC = () => {
+const Hero: React.FC = () => {
   return (
     <Background id="home">
       <HeroDiv>
@@ -46,4 +46,4 @@ const hero: React.FC = () => {
   )
 }
 
-export default hero
+export default Hero

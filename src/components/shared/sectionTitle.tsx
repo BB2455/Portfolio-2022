@@ -6,7 +6,7 @@ const SectionDiv = styled.div`
   flex-direction: column;
   gap: 1rem;
   padding: 2rem 0;
-  align-items : center;
+  align-items: center;
 `
 
 const Title = styled.h2`
@@ -17,16 +17,16 @@ const SubTitle = styled.h4``
 
 type Props = {
   title: string
-  subtitle: string
+  subtitle?: string
 }
 
-const sectionTitle: React.FC<Props> = ({ title, subtitle }) => {
+const SectionTitle: React.FC<Props> = ({ title, subtitle }) => {
   return (
     <SectionDiv>
       <Title>{title}</Title>
-      <SubTitle>{subtitle}</SubTitle>
+      {subtitle ? <SubTitle>{subtitle}</SubTitle> : null}
     </SectionDiv>
   )
 }
 
-export default sectionTitle
+export default SectionTitle
