@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Background } from '../shared'
+import { device } from '../../styles/devices'
 
 export const ProjectsBackground = styled(Background)`
   position: relative;
@@ -32,5 +33,8 @@ export const ProjectButton = styled.a`
   :focus-visible {
     color: ${(props) => props.theme.colors.white};
     background: ${(props) => props.theme.colors.accent};
+  }
+  @media ${device.md} {
+    padding: 0.5rem 1.5rem;
   }
 `

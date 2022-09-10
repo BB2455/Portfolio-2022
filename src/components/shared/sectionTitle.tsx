@@ -7,13 +7,16 @@ const SectionDiv = styled.div`
   gap: 1rem;
   padding: 2rem 0;
   align-items: center;
+  text-align: center;
 `
 
 const Title = styled.h2`
   font-size: 2rem;
 `
 
-const SubTitle = styled.h4``
+const SubTitle = styled.p`
+  font-weight: 700;
+`
 
 type Props = {
   title: string

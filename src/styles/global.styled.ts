@@ -23,4 +23,8 @@ export default createGlobalStyle`
   .active {
     text-decoration: underline;
   }
+
+  .openNav {
+    display: flex;
+  }
 `

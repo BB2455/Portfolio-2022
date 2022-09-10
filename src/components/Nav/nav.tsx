@@ -1,77 +1,62 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { links } from '../../config/settings'
 import { IconLink } from '../shared'
-import { Container, LinksDiv } from './nav.styled'
+import {
+  LinksDiv,
+  NavContainer,
+  NavToggle,
+  NavContent,
+  SocialLinksDiv,
+} from './nav.styled'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import { NavLink } from './nav.styled'
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { NavLink } from './NavLink'
 
 const Nav: React.FC = () => {
+  const [navOpen, setNavOpen] = useState<boolean>(false)
+  const toggleNav = () => {
+    setNavOpen((prev) => !prev)
+  }
+
   return (
-    <Container nav>
-      <LinksDiv>
-        <NavLink
-          href=""
-          to="home"
-          spy={true}
-          smooth={true}
-          duration={500}
-          tabIndex={0}
-        >
-          Home
-        </NavLink>
-        <NavLink
-          href=""
-          to="projects"
-          spy={true}
-          smooth={true}
-          duration={500}
-          tabIndex={0}
-        >
-          Projects
-        </NavLink>
-        <NavLink
-          href=""
-          to="about"
-          spy={true}
-          smooth={true}
-          duration={500}
-          tabIndex={0}
-        >
-          About
-        </NavLink>
-        <NavLink
-          href=""
-          to="contact"
-          spy={true}
-          smooth={true}
-          duration={500}
-          tabIndex={0}
-        >
-          Contact
-        </NavLink>
-      </LinksDiv>
-      <LinksDiv>
-        <IconLink
-          href={links.gitHub}
-          target="_blank"
-          rel="noreferrer"
-          size="2rem"
-          hoverColor="tertiary"
-        >
-          <FontAwesomeIcon icon={faGithub} />
-        </IconLink>
-        <IconLink
-          href={links.linkedIn}
-          target="_blank"
-          rel="noreferrer"
-          size="2rem"
-          hoverColor="tertiary"
-        >
-          <FontAwesomeIcon icon={faLinkedin} />
-        </IconLink>
-      </LinksDiv>
-    </Container>
+    <NavContainer>
+      <NavToggle onClick={toggleNav}>
+        {navOpen ? (
+          <FontAwesomeIcon icon={faXmark} />
+        ) : (
+          <FontAwesomeIcon icon={faBars} />
+        )}
+      </NavToggle>
+      <NavContent className={navOpen ? 'openNav' : ''}>
+        <LinksDiv>
+          <NavLink to="home">Home</NavLink>
+          <NavLink to="projects">Projects</NavLink>
+          <NavLink to="about">About</NavLink>
+          <NavLink to="contact">Contact</NavLink>
+        </LinksDiv>
+        <SocialLinksDiv>
+          <IconLink
+            href={links.gitHub}
+            target="_blank"
+            rel="noreferrer"
+            size="2rem"
+            hoverColor="tertiary"
+          >
+            <FontAwesomeIcon icon={faGithub} />
+          </IconLink>
+          <IconLink
+            href={links.linkedIn}
+            target="_blank"
+            rel="noreferrer"
+            size="2rem"
+            hoverColor="tertiary"
+          >
+            <FontAwesomeIcon icon={faLinkedin} />
+          </IconLink>
+        </SocialLinksDiv>
+      </NavContent>
+    </NavContainer>
   )
 }
 

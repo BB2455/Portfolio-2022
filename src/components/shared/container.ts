@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { device } from '../../styles/devices'
 
 type Props = {
   noFlex?: boolean
@@ -20,4 +21,16 @@ export default styled.div<Props>`
     align-items: center;
     flex-direction: column;
     `}
+  
+  @media ${device.lg} {
+    width: 45rem;
+  }
+
+  @media ${device.md} {
+    width: 30rem;
+  }
+
+  @media ${device.sm} {
+    width: 90vw;
+  }
 `

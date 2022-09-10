@@ -1,26 +1,36 @@
 import styled from 'styled-components'
+import { device } from '../../../styles/devices'
 
 export const ProjectContainer = styled.div`
-  display: flex;
-  flex: 1 1;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  @media ${device.md} {
+    grid-auto-flow: row;
+  }
 `
 
 export const ProjectPicture = styled.picture`
-  flex: 1 1;
+  img {
+    height: auto;
+    max-width: 100%;
+  }
 `
 
 export const ProjectContent = styled.article`
-  flex: 1 1;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
   gap: 1rem;
   padding: 1rem 2rem;
+  @media ${device.md} {
+    align-items: center;
+  }
 `
 
 export const ProjectLinks = styled.div`
   display: flex;
   gap: 1.5rem;
+  align-items: flex-start;
 `
 
 export const ProjectLink = styled.a`

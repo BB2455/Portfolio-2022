@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { device } from '../../styles/devices'
 
 export const FooterDiv = styled.footer`
   display: flex;
@@ -20,6 +21,13 @@ export const TopDiv = styled.div`
   padding: 2rem 1rem;
   justify-content: space-between;
   min-width: 100%;
+  @media ${device.sm} {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    
+  }
 `
 
 export const ContentDiv = styled.div`
@@ -29,6 +37,11 @@ export const ContentDiv = styled.div`
   align-items: flex-start;
   gap: 1rem;
   max-width: 50%;
+  @media ${device.sm} {
+    max-width: 90%;
+    align-items: center;
+    text-align: center;
+  }
 `
 
 export const IconDiv = styled.div`

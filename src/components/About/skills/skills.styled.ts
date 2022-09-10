@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { device } from '../../../styles/devices'
 
 export const SkillsContainer = styled.div`
   background: ${(props) => props.theme.colors.white};
@@ -10,6 +11,9 @@ export const SkillsContainer = styled.div`
   margin-bottom: 1rem;
   width: 100%;
   margin-top: -4rem;
+  @media ${device.md} {
+    flex-direction: column;
+  }
 `
 
 export const SkillContainer = styled.div`
@@ -20,11 +24,20 @@ export const SkillContainer = styled.div`
   padding: 0 2rem;
   flex: 1 1;
   word-break: break-all;
+  @media ${device.md} {
+    padding: 2rem 0;
+  }
 `
 
 export const MidSkillContainer = styled(SkillContainer)`
   border-right: 1px solid rgba(0, 0, 0, 0.1);
   border-left: 1px solid rgba(0, 0, 0, 0.1);
+  @media ${device.md} {
+    border-right: none;
+    border-left: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
 `
 
 export const SkillIcon = styled(FontAwesomeIcon)`

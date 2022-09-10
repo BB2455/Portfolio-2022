@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Link } from 'react-scroll'
+import { device } from '../../styles/devices'
 
 export const Background = styled.section`
   height: 100vh;
@@ -31,10 +32,22 @@ export const ActionDiv = styled.div`
 
 export const Greeting = styled.h1`
   font-size: 5rem;
-`
+  @media ${device.md} {
+    font-size: 4rem;
+  }
+  @media ${device.sm} {
+    font-size: 3rem;
+  }
+  `
 
 export const Text = styled.h2`
   font-size: 3rem;
+  @media ${device.md} {
+    font-size: 2rem;
+  }
+  @media ${device.sm} {
+    font-size: 1.5rem;
+  }
 `
 
 export const ActionButton = styled(Link)`

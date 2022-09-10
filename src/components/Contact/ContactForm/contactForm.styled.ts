@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import TextareaAutosize from 'react-textarea-autosize'
+import { device } from '../../../styles/devices'
 
 export const FormContainer = styled.div`
   padding: 2rem 0;
@@ -16,6 +17,9 @@ export const Form = styled.form`
   min-width: 80%;
   border-radius: 2rem;
   box-shadow: ${(props) => props.theme.boxShadow};
+  @media ${device.lg} {
+    min-width: 90%;
+  }
 `
 
 export const InputDiv = styled.div`
