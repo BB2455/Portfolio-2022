@@ -30,7 +30,13 @@ const Projects: React.FC = () => {
               img={project.img}
             />
           ))}
-          <ProjectButton href={links.gitHub} target="_blank" rel="noreferrer">
+          <ProjectButton
+            href={links.gitHub}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Find more of my projects on GitHub!"
+            title="GutHub"
+          >
             <FontAwesomeIcon icon={faGithub} />
             See more on GitHub
           </ProjectButton>

@@ -31,17 +31,25 @@ const Footer: React.FC = () => {
             <ContentDiv>
               <h2>Socials</h2>
               <IconDiv>
-                <IconLink href={links.gitHub} target="_blank" rel="noreferrer">
+                <IconLink
+                  href={links.gitHub}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Check out my GitHub"
+                  title="GitHub"
+                >
                   <FontAwesomeIcon icon={faGithub} />
                 </IconLink>
                 <IconLink
                   href={links.linkedIn}
                   target="_blank"
                   rel="noreferrer"
+                  aria-label="Connect with me on LinkedIn"
+                  title='LinkedIn'
                 >
                   <FontAwesomeIcon icon={faLinkedin} />
                 </IconLink>
-                <IconLink href={`mailto:${links.email}`}>
+                <IconLink href={`mailto:${links.email}`} aria-label='Send me an Email!' title='Email Me!'>
                   <FontAwesomeIcon icon={faEnvelope} />
                 </IconLink>
               </IconDiv>

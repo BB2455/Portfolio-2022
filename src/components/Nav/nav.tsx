@@ -21,7 +21,11 @@ const Nav: React.FC = () => {
 
   return (
     <NavContainer>
-      <NavToggle onClick={toggleNav}>
+      <NavToggle
+        onClick={toggleNav}
+        aria-label={navOpen ? 'Close Nav Menu' : 'Open Nav Menu'}
+        title={navOpen ? 'Close' : 'Open'}
+      >
         {navOpen ? (
           <FontAwesomeIcon icon={faXmark} />
         ) : (
@@ -42,6 +46,8 @@ const Nav: React.FC = () => {
             rel="noreferrer"
             size="2rem"
             hoverColor="tertiary"
+            aria-label="Check out my GitHub"
+            title="GitHub"
           >
             <FontAwesomeIcon icon={faGithub} />
           </IconLink>
@@ -51,6 +57,8 @@ const Nav: React.FC = () => {
             rel="noreferrer"
             size="2rem"
             hoverColor="tertiary"
+            aria-label="Connect with me on LinkedIn"
+            title="LinkedIn"
           >
             <FontAwesomeIcon icon={faLinkedin} />
           </IconLink>

@@ -42,12 +42,12 @@ const Project: React.FC<Props> = ({
         <ShowMore>{description}</ShowMore>
         <ProjectLinks>
           {github && (
-            <ProjectLink href={github} target="_blank" rel="noreferrer">
+            <ProjectLink href={github} target="_blank" rel="noreferrer" aria-label='Check out this projects GitHub!' title='GitHub'>
               GitHub
             </ProjectLink>
           )}
           {liveSite && (
-            <ProjectLink href={liveSite} target="_blank" rel="noreferrer">
+            <ProjectLink href={liveSite} target="_blank" rel="noreferrer" aria-label='Check out this project Live!' title='Live Site'>
               Live Site
             </ProjectLink>
           )}

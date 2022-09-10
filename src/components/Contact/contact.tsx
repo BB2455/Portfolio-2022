@@ -15,15 +15,27 @@ const Contact: React.FC = () => {
           subtitle="Connect with me online"
         />
         <IconLinksDiv>
-          <Link href={links.gitHub} target="_blank" rel="noreferrer">
+          <Link
+            href={links.gitHub}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Check out my GitHub"
+            title='GitHub'
+          >
             <Icon icon={faGithub} />
             GitHub
           </Link>
-          <Link href={links.linkedIn} target="_blank" rel="noreferrer">
+          <Link
+            href={links.linkedIn}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Connect with me on LinkedIn"
+            title='LinkedIn'
+          >
             <Icon icon={faLinkedin} />
             LinkedIn
           </Link>
-          <Link href={`mailto:${links.email}`}>
+          <Link href={`mailto:${links.email}`} aria-label="Send me an Email!" title='Email Me!'>
             <Icon icon={faEnvelope} />
             Email Me!
           </Link>

@@ -16,22 +16,42 @@ const ContactForm: React.FC = () => {
     <FormContainer>
       <Form>
         <InputDiv>
-          <FormLabel htmlFor="name">Name</FormLabel>
-          <FormInput type="text" id="name" placeholder="Enter Your Name" />
+          <FormLabel htmlFor="name" title="Enter Your Name">
+            Name
+          </FormLabel>
+          <FormInput
+            type="text"
+            id="name"
+            required
+            placeholder="Enter Your Name"
+            title="Enter Your Name"
+          />
         </InputDiv>
         <InputDiv>
-          <FormLabel htmlFor="email">Email</FormLabel>
-          <FormInput type="email" id="email" placeholder="Enter Your Email" />
+          <FormLabel htmlFor="email" title="Enter Your Email">
+            Email
+          </FormLabel>
+          <FormInput
+            type="email"
+            id="email"
+            required
+            placeholder="Enter Your Email"
+            title="Enter Your Email"
+          />
         </InputDiv>
         <InputDiv>
-          <FormLabel htmlFor="message">Message</FormLabel>
+          <FormLabel htmlFor="message" title="Enter Your Message">
+            Message
+          </FormLabel>
           <FormTextArea
             name="message"
             id="message"
+            required
             placeholder="Enter Your Message"
+            title="Enter Your Message"
           ></FormTextArea>
         </InputDiv>
-        <SubmitButton type="submit" >
+        <SubmitButton type="submit" title="Submit">
           Submit <FontAwesomeIcon icon={faPaperPlane} />
         </SubmitButton>
       </Form>
