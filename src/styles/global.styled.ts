@@ -7,13 +7,9 @@ export default createGlobalStyle`
     padding: 0;
     margin: 0;
   }
-  
-  html, body {
-    min-height: 100%;
-  }
 
   #root {
-    min-height: 100%;
+    min-height: 100vh;
     min-width: 100%;
     display: flex;
     flex-direction: column;
