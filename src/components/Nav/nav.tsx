@@ -19,6 +19,8 @@ const Nav: React.FC = () => {
     setNavOpen((prev) => !prev)
   }
 
+  const closeNavIfOpen = () => (navOpen ? toggleNav() : null)
+
   return (
     <NavContainer>
       <NavToggle
@@ -34,10 +36,18 @@ const Nav: React.FC = () => {
       </NavToggle>
       <NavContent className={navOpen ? 'openNav' : ''}>
         <LinksDiv>
-          <NavLink to="home">Home</NavLink>
-          <NavLink to="projects">Projects</NavLink>
-          <NavLink to="about">About</NavLink>
-          <NavLink to="contact">Contact</NavLink>
+          <NavLink to="home" onClick={closeNavIfOpen}>
+            Home
+          </NavLink>
+          <NavLink to="projects" onClick={closeNavIfOpen}>
+            Projects
+          </NavLink>
+          <NavLink to="about" onClick={closeNavIfOpen}>
+            About
+          </NavLink>
+          <NavLink to="contact" onClick={closeNavIfOpen}>
+            Contact
+          </NavLink>
         </LinksDiv>
         <SocialLinksDiv>
           <IconLink

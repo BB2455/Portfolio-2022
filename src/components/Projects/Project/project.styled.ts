@@ -31,6 +31,7 @@ export const ProjectLinks = styled.div`
   display: flex;
   gap: 1.5rem;
   align-items: flex-start;
+  flex-wrap: wrap;
 `
 
 export const ProjectLink = styled.a`

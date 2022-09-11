@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { Link } from 'react-scroll'
 import { device } from '../../styles/devices'
 
@@ -38,7 +38,7 @@ export const Greeting = styled.h1`
   @media ${device.sm} {
     font-size: 3rem;
   }
-  `
+`
 
 export const Text = styled.h2`
   font-size: 3rem;
@@ -66,4 +66,18 @@ export const ActionButton = styled(Link)`
     color: ${(props) => props.theme.colors.white};
     background: ${(props) => props.theme.colors.accent};
   }
+`
+const scrollAnimation = keyframes`
+  0% {bottom: -80%}
+  30%, 100% {bottom: -100%}
+`
+
+export const AnimationText = styled.p`
+  user-select: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  position: absolute;
+  bottom: -80%;
+  z-index: 10;
+  animation: ${scrollAnimation} 4s ease-out infinite;
 `

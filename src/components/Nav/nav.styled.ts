@@ -15,9 +15,6 @@ export const NavContainer = styled.nav`
   backdrop-filter: blur(100px);
   color: ${(props) => props.theme.colors.white};
   z-index: 999;
-  .NavToggle {
-    display: none;
-  }
 
   @media ${device.lg} {
     width: 45rem;
@@ -27,13 +24,6 @@ export const NavContainer = styled.nav`
     width: 30rem;
     flex-direction: column;
     align-items: flex-end;
-    .NavToggle {
-      display: inline-block;
-    }
-    .NavContent {
-      /* display: none; */
-      flex-direction: column;
-    }
   }
 
   @media ${device.sm} {

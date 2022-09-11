@@ -17,9 +17,10 @@ const ScrollLink = styled(Link)`
 type Props = {
   to: string
   children: string
+  onClick?: () => void
 }
 
-export const NavLink: React.FC<Props> = ({ to, children }) => {
+export const NavLink: React.FC<Props> = ({ to, children, onClick }) => {
   return (
     <ScrollLink
       href=""
@@ -28,6 +29,8 @@ export const NavLink: React.FC<Props> = ({ to, children }) => {
       smooth={true}
       duration={500}
       tabIndex={0}
+      offset={-150}
+      onClick={onClick}
     >
       {children}
     </ScrollLink>

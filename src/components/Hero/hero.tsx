@@ -6,8 +6,11 @@ import {
   Greeting,
   Text,
   ActionButton,
+  AnimationText,
 } from './hero.styled'
 import { Container, SvgTriangle } from '../shared'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 const Hero: React.FC = () => {
   return (
@@ -20,16 +23,22 @@ const Hero: React.FC = () => {
         </Container>
       </HeroDiv>
       <ActionDiv>
-        <Container>
+        <Container style={{ position: 'relative' }}>
           <ActionButton
             href=""
             to="projects"
             smooth={true}
             duration={500}
             tabIndex={0}
+            offset={-150}
           >
             Projects
           </ActionButton>
+          <AnimationText>
+            <FontAwesomeIcon icon={faAngleDown} />
+            {` Scroll Down `}
+            <FontAwesomeIcon icon={faAngleDown} />
+          </AnimationText>
         </Container>
       </ActionDiv>
       <SvgTriangle
