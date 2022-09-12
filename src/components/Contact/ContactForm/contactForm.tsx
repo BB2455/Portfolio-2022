@@ -14,7 +14,8 @@ import { faPaperPlane } from '@fortawesome/free-solid-svg-icons'
 const ContactForm: React.FC = () => {
   return (
     <FormContainer>
-      <Form>
+      <Form name="contact" method="POST">
+        <input type="hidden" name="form-name" value="contact" />
         <InputDiv>
           <FormLabel htmlFor="name" title="Enter Your Name">
             Name
@@ -22,6 +23,7 @@ const ContactForm: React.FC = () => {
           <FormInput
             type="text"
             id="name"
+            name="name"
             required
             placeholder="Enter Your Name"
             title="Enter Your Name"
@@ -34,6 +36,7 @@ const ContactForm: React.FC = () => {
           <FormInput
             type="email"
             id="email"
+            name="email"
             required
             placeholder="Enter Your Email"
             title="Enter Your Email"
