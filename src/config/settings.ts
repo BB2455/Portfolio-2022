@@ -61,7 +61,7 @@ export const projects = [
     description:
       'First portfolio website, crafted in GatsbyJS to showcase my projects, skills, and ways to contact me, first designed in Figma over many designs until finally settling on my 2021 portfolio. Utilizing GraphQL to handle data, Styled-Components for styling, and deployed on Netlify.',
     github: 'https://github.com/BB2455/Portfolio-2021',
-    liveSite: 'https://blairb.dev',
+    liveSite: 'https://2021.blairb.dev',
     img: {
       webp: OldPortolioWebP,
       fallback: OldPortfolioPNG,
