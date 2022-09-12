@@ -16,6 +16,11 @@ const ContactForm: React.FC = () => {
     <FormContainer>
       <Form name="contact" method="POST">
         <input type="hidden" name="form-name" value="contact" />
+        <div hidden>
+          <label>
+            Don’t fill this out if you’re human: <input name="bot-field" />
+          </label>
+        </div>
         <InputDiv>
           <FormLabel htmlFor="name" title="Enter Your Name">
             Name
