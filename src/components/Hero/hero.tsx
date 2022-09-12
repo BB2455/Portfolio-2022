@@ -11,6 +11,7 @@ import {
 import { Container, SvgTriangle } from '../shared'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleDown } from '@fortawesome/free-solid-svg-icons'
+import Typed from '../Typed'
 
 const Hero: React.FC = () => {
   return (
@@ -19,7 +20,24 @@ const Hero: React.FC = () => {
         <Container noFlex>
           <Greeting>Hello! 👋</Greeting>
           <Text>I'm Blair Burke</Text>
-          <Text>A Full-stack Web Developer</Text>
+          <Text>
+            A{' '}
+            <Typed
+              options={{
+                strings: [
+                  'Full Stack Developer',
+                  'Front End Developer',
+                  'Back End Developer',
+                  'Web Developer',
+                ],
+                typeSpeed: 60,
+                backSpeed: 20,
+                loop: true,
+                backDelay: 2500,
+                showCursor: false,
+              }}
+            />
+          </Text>
         </Container>
       </HeroDiv>
       <ActionDiv>
