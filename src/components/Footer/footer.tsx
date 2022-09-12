@@ -15,6 +15,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { footer } from '../../config/settings'
 
 const Footer: React.FC = () => {
   return (
@@ -23,10 +24,8 @@ const Footer: React.FC = () => {
         <Container>
           <TopDiv>
             <ContentDiv>
-              <h2>Blair Burke</h2>
-              <p>
-                A full-stack web developer passionate about web development.
-              </p>
+              <h2>{footer.title}</h2>
+              <p>{footer.subTitle}</p>
             </ContentDiv>
             <ContentDiv>
               <h2>Socials</h2>
@@ -45,18 +44,22 @@ const Footer: React.FC = () => {
                   target="_blank"
                   rel="noreferrer"
                   aria-label="Connect with me on LinkedIn"
-                  title='LinkedIn'
+                  title="LinkedIn"
                 >
                   <FontAwesomeIcon icon={faLinkedin} />
                 </IconLink>
-                <IconLink href={`mailto:${links.email}`} aria-label='Send me an Email!' title='Email Me!'>
+                <IconLink
+                  href={`mailto:${links.email}`}
+                  aria-label="Send me an Email!"
+                  title="Email Me!"
+                >
                   <FontAwesomeIcon icon={faEnvelope} />
                 </IconLink>
               </IconDiv>
             </ContentDiv>
           </TopDiv>
           <CenterDiv>
-            <p>Made By Blair Burke 2022</p>
+            <p>{footer.madeBy}</p>
           </CenterDiv>
         </Container>
       </BackgroundContainer>
