@@ -50,7 +50,6 @@ export const projects = [
     description:
       "Full Stack with full CRUD functionality includes a fully working login/signup function with email handling verifying accounts and forgotten passwords. Some features include the ability to create, read, update and delete users once signed in and the ability to search users based on name, time created, and the order of the results, lastly the ability to change your password, log out of other sessions, and the ability to delete your account. Built with React for the front end, Express on the backend, and MongoDB for the database, deployed on an AWS EC2 instance using Docker and Docker-Compose, NGINX, and Let's Encrypt for the SSL Certificate.",
     github: 'https://github.com/BB2455/Full-Stack-App',
-    liveSite: 'https://www.blairsfullstack.com',
     img: {
       webp: FullStackWebP,
       fallback: FullStackPNG,

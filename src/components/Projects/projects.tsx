@@ -26,7 +26,7 @@ const Projects: React.FC = () => {
               title={project.title}
               description={project.description}
               github={project.github}
-              liveSite={project.liveSite}
+              liveSite={project?.liveSite}
               img={project.img}
             />
           ))}
